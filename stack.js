@@ -1,12 +1,12 @@
 
-class Node {
+export class Node {
     constructor(value) {
         this.value = value;
         this.next = null
     }
 }
 
-class Stack {
+export class Stack {
     constructor(value) {
 
         if (value === undefined){
@@ -68,6 +68,12 @@ class Stack {
             temp = temp.next;
         }
 
+    }
+
+    // size method starts here
+
+    length(){
+        return this.size;
     }
 }
 

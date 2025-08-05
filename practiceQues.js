@@ -8,7 +8,9 @@ function isValidParenthesis (string){
     }
     for (const char of string){
         if (brackets[char]){
+            console.log("checking" + brackets[char])
             stack.push(char);
+            console.log(stack)
         }
         else {
            const top = stack.pop();
@@ -20,5 +22,5 @@ function isValidParenthesis (string){
     return  stack.length === 0;
 }
 console.log(isValidParenthesis("(){}}]"));
-console.log(isValidParenthesis("(){}[]"));
-console.log(isValidParenthesis("([{}{ ])"));
+// console.log(isValidParenthesis("(){}[]"));
+// console.log(isValidParenthesis("([{}{ ])"));
