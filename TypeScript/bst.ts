@@ -47,6 +47,17 @@ function insertNode (rootNode:BSTNode,NodeValue:number){
     return "Node inserted Successfully";
 }
 
+function preOrderTraversal(rootNode:BSTNode){
+    if (rootNode.data === null){
+        return
+    }
+     console.log(rootNode.data);
+     preOrderTraversal(rootNode.leftChild);
+     preOrderTraversal(rootNode.rightChild);
+
+
+}
+
 
 const newBST = new BSTNode();
 console.log(insertNode(newBST,49));
